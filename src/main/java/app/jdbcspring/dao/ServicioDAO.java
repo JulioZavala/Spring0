@@ -1,7 +1,7 @@
 
 package app.jdbcspring.dao;
 
-import app.jdbctemplate.model.Servicio;
+import app.jdbcspring.model.Servicio;
 import app.zelper.GenericDAO;
 
 

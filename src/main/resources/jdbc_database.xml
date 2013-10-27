@@ -14,4 +14,9 @@
     </bean>
     
     
+    
+    <bean id="servicioDAO" class="app.jdbcspring.dao.jdbc.ServicioDAOJ">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
 </beans>

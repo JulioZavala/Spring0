@@ -1,10 +1,17 @@
-package app.jdbctemplate.model;
+package app.jdbcspring.model;
 
 public class Servicio {
 
     private long id;
     private String descripcion;
     private double costoHora;
+
+    public Servicio(long id) {
+        this.id = id;
+    }
+
+    public Servicio() {
+    }
 
     public long getId() {
         return id;
@@ -29,6 +36,4 @@ public class Servicio {
     public void setCostoHora(double costoHora) {
         this.costoHora = costoHora;
     }
-    
-    
 }

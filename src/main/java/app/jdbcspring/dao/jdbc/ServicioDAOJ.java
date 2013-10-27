@@ -1,7 +1,7 @@
 package app.jdbcspring.dao.jdbc;
 
 import app.jdbcspring.dao.ServicioDAO;
-import app.jdbctemplate.model.Servicio;
+import app.jdbcspring.model.Servicio;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

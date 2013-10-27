@@ -1,6 +1,6 @@
 package app.jdbcspring.dao.jdbc;
 
-import app.jdbctemplate.model.Servicio;
+import app.jdbcspring.model.Servicio;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
