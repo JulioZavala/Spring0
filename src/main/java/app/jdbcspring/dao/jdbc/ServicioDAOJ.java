@@ -1,10 +1,8 @@
 package app.jdbcspring.dao.jdbc;
 
 import app.jdbcspring.dao.ServicioDAO;
-import app.jdbctemplate.model.Local;
 import app.jdbctemplate.model.Servicio;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import org.springframework.dao.DataAccessException;
@@ -24,7 +22,9 @@ public class ServicioDAOJ extends JdbcDaoSupport implements ServicioDAO {
 
             servicio.setId(Long.parseLong(String.valueOf(row.get("id"))));
             servicio.setDescripcion((String) row.get("descripcion"));
-            servicio.setCostoHora((Double) row.get("costo_hora"));
+            //servicio.setCostoHora((Double) row.get("costo_hora"));
+            servicio.setCostoHora(Double.parseDouble(String.valueOf(row.get("costo_hora"))));
+            
             servicios.add(servicio);
         }
 
