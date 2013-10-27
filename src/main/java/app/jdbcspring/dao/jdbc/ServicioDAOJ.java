@@ -1,19 +1,37 @@
 package app.jdbcspring.dao.jdbc;
 
 import app.jdbcspring.dao.ServicioDAO;
+import app.jdbctemplate.model.Local;
 import app.jdbctemplate.model.Servicio;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
 public class ServicioDAOJ extends JdbcDaoSupport implements ServicioDAO {
 
     public List<Servicio> list() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        String sql = "select * from servicio";
+
+        List<Servicio> servicios = new ArrayList<Servicio>();
+
+        List<Map<String, Object>> rows = this.getJdbcTemplate().queryForList(sql);
+
+        for (Map row : rows) {
+            Servicio servicio = new Servicio();
+
+            servicio.setId(Long.parseLong(String.valueOf(row.get("id"))));
+            servicio.setDescripcion((String) row.get("descripcion"));
+            servicio.setCostoHora((Double) row.get("costo_hora"));
+            servicios.add(servicio);
+        }
+
+        return servicios;
     }
 
     public Servicio get(Servicio t) {
-
 
         String sql = "select * from servicio where id = ?";
 
