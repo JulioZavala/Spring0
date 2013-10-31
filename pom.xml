@@ -7,7 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>spring0</name>
+    <name>springJDBC</name>
     <url>http://maven.apache.org</url>
 
     <properties>
